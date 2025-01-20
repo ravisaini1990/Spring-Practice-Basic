@@ -18,9 +18,27 @@ repositories {
 }
 
 dependencies {
+
+	//For only Spring Framework
+	implementation 'org.springframework:spring-core:6.2.2'
+	implementation 'org.springframework:spring-context:6.2.2'
+	implementation 'org.slf4j:slf4j-api:2.1.0-alpha1'
+	implementation 'ch.qos.logback:logback-classic:1.5.16'
+
 	implementation 'org.springframework.boot:spring-boot-starter'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	//testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testImplementation 'org.mockito:mockito-core:5.14.2'
+	testImplementation 'org.mockito:mockito-junit-jupiter:5.14.2'
+
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
+	testImplementation 'junit:junit:4.13.2' //mandatory wif using without spring boot
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
+	testImplementation 'org.springframework:spring-test:6.2.1'
+
+	// https://mvnrepository.com/artifact/javax.inject/javax.inject
+	implementation group: 'javax.inject', name: 'javax.inject', version: '1'
+
 }
 
 tasks.named('test') {

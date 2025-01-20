@@ -1,6 +1,7 @@
 package com.example.demo.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -19,10 +20,10 @@ public class BinarySearchImpl {
 //    ISortAlgorithm sortAlgorithm;
 
     @Autowired
-    ISortAlgorithm mergeSort;
+    MergeSort mergeSort;
 
-    @Autowired
-    ISortAlgorithm bubbleSort;
+    //@Autowired
+    //ISortAlgorithm bubbleSort;
 
     //constructor Injection
 //    public BinarySearchImpl(ISortAlgorithm sortAlgorithm) {
